@@ -11,19 +11,15 @@ class SendTweet
 
 	def log_in_to_twitter
 		@client = Twitter::REST::Client.new do |config|
-	  	config.consumer_key        = ENV['consumer_key']
-  	  	config.consumer_secret     = ENV['consumer_secret']
-      	config.access_token        = ENV['access_token']
-  	  	config.access_token_secret = ENV['access_token_secret']
+	  	config.consumer_key        = ENV['CONSUMER_KEY']
+  	  	config.consumer_secret     = ENV['CONSUMER_SECRET']
+      	config.access_token        = ENV['ACCESS_TOKEN']
+  	  	config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
 		end
 	end
 
 	def send_tweet(content)
 		@client.update(content)
-	end
-
-	def skurskur
-		p skurskur
 	end
 
 end
