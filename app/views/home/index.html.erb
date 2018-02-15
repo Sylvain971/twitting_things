@@ -1,0 +1,13 @@
+<h4>Cuicui ! Entrez votre tweet :</h4>
+
+<%= form_with scope: :tweet, local: true do |form| %>
+  <p>
+    <%= form.text_field :content %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<%end%>
+
